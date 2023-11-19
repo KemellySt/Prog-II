@@ -3,14 +3,14 @@ package Programa;
 public class Curso {
 
     String nomeDocurso;
-    String disciplinas;
+    Disciplinas disciplinas;
     int codigo;
     String descricao;
 
     public Curso(String nomeDocurso, String disciplinas, int codigo, String descricao){
 
         this.nomeDocurso = nomeDocurso;
-        this.disciplinas = disciplinas;
+        this.disciplinas = new Disciplinas(disciplinas);
         this.codigo = codigo;
         this.descricao = descricao;
 
@@ -20,7 +20,7 @@ public class Curso {
         return nomeDocurso;
     }
 
-    public String getDisciplinas() {
+    public Disciplinas getDisciplinas() {
         return disciplinas;
     }
 

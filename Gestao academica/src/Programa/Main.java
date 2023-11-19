@@ -10,9 +10,12 @@ public class Main {
 
         // Organizando a tela inicial
         Scanner sc = new Scanner(System.in);
-        int escolha;
+        String nome, cpf, endereco, telefone, matricula, nomeDocurso, disciplinas, descricao, titulacao, areaP;
+        int escolha, ctps;
+        Double salario;
         Aluno aluno[];
-        // Funcionario funcionario[];
+        Funcionario funcionario[];
+        Professor professor[];
         Random r = new Random();
 
         do{
@@ -31,9 +34,8 @@ public class Main {
                 case 1:
 
                     System.out.println(
-                            "\n--------------------------------------------CADASTRAMENTO DE ALUNOS--------------------------------------------");
+                            "\n-------------------------------------------- CADASTRAMENTO DE ALUNOS --------------------------------------------");
 
-                    String nome, cpf, endereco, telefone, matricula, nomeDocurso, disciplinas, descricao;
                     int Quant_Alunos;
                     int codigo;
                     System.out.println("Digite quantos alunos deseja cadastrar: ");
@@ -69,7 +71,7 @@ public class Main {
 
                     for (int j = 0; j < Quant_Alunos; j++) {
                         System.err.println(
-                                "----------------------------------INFORMAÇÕES--------------------------------");
+                                "---------------------------------- INFORMAÇÕES --------------------------------");
                         System.out.print("\n");
                         System.out.print("--> Dados Aluno\n");
                         System.err.print("\n");
@@ -80,10 +82,78 @@ public class Main {
                     break;
 
                 case 2:
+                System.out.println(
+                            "\n-------------------------------------------- CADASTRAMENTO DE FUNCIONÁRIOS --------------------------------------------");
+                // Funcionário
+                int Quant_Func, escolha2;
+                System.out.println("Quantos funcionários deseja cadastrar? ");
+                Quant_Func = sc.nextInt();
+                funcionario = new Funcionario[Quant_Func];
+                System.out.println("Este funcionário é:\n[1] Professor\n [2] Técnico Administrativo");
+                escolha2 = sc.nextInt();
 
-                    // Funcionário
+                if(escolha2 == 1){
+                // Professor
 
+                    for(int i = 0; i < Quant_Func; i++){
 
+                        //Dados pessoa
+                        System.out.println("0" + (i + 1) + "Digite o nome do professor: ");
+                        nome = sc.nextLine();
+                        System.out.println("0" + (i + 1) + "Digite o cpf do professor: ");
+                        cpf = sc.nextLine();
+                        System.out.println("0" + (i + 1) + " Digite o endereco do professor: ");
+                        endereco = sc.nextLine();
+                        System.out.println("0" + (i + 1) + " Digite o telefone do professor: ");
+                        telefone = sc.nextLine();
+                        // Dados funcionario
+                        System.out.println("CTPS do professor: ");
+                        ctps = sc.nextInt();
+                        System.out.println("Cadastrar salário: ");
+                        salario = sc.nextDouble();
+                        System.out.println("CTPS do professor: ");
+                        //Dados professor
+                        System.out.println("======================= ÁREA PARA CADASTRAMENTO DE PROFESSORES =========================");
+                        System.out.println("");;
+
+                    }
+
+                }
+                else{
+                // Técnico Administrativo
+                    for(int i = 0; i < Quant_Func; i++){
+
+                        //Dados pessoa
+                        System.out.println("0" + (i + 1) + "Digite o nome do funcionário: ");
+                        nome = sc.nextLine();
+                        System.out.println("0" + (i + 1) + "Digite o cpf do funcionário: ");
+                        cpf = sc.nextLine();
+                        System.out.println("0" + (i + 1) + " Digite o endereco do funcionário: ");
+                        endereco = sc.nextLine();
+                        System.out.println("0" + (i + 1) + " Digite o telefone do funcionário: ");
+                        telefone = sc.nextLine();
+                        // Dados funcionario
+                        System.out.println("CTPS do funcionário: ");
+                        ctps = sc.nextInt();
+                        System.out.println("Cadastrar salário: ");
+                        salario = sc.nextDouble();
+                        System.out.println("CTPS do funcionário: ");
+                        ctps = sc.nextInt();
+
+                    }
+
+                }
+
+                for (int j = 0; j < Quant_Func; j++) {
+                        System.err.println(
+                                "----------------------------------INFORMAÇÕES--------------------------------");
+                        System.out.print("\n");
+                        System.out.print("--> Dados Funcuonário\n");
+                        System.err.print("\n");
+                        funcionario[j].mostrarFuncionario();
+                        System.err.print("\n");
+                }
+            
                     break;
 
                 case 3:
@@ -92,16 +162,7 @@ public class Main {
                 default:
                     break;
             }
-            /*
-             * System.out.print("Dados Curso\n");
-             * System.err.print("\n");
-             * curso.mostrarCurso();
-             * System.err.print("\n");
-             * 
-             * System.err.print("Dados Funcionário\n");
-             * System.out.print("\n");
-             * f.mostrarFuncionario();
-             */
+
 
             // Imprimindo todos as informações
             /*
