@@ -18,9 +18,9 @@ public class Funcionario {
 
         System.out.println("Carregando...");
         System.err.println(
-                "----------------------------------INFORMAÇÕES--------------------------------");
+                "============================ INFORMAÇÕES ============================");
         System.out.print("\n");
-        System.out.print("--> Dados Funcuonário\n");
+        System.out.print("--> Dados Funcionário\n");
         System.err.print("\n");
         System.out.println("Funcionário: " + this.pessoa.getNome());
         System.out.println("Endereço: " + this.pessoa.getEndereco());
