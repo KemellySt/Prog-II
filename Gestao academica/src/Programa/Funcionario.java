@@ -1,12 +1,12 @@
 package Programa;
 
-public class Funcionario{
+public class Funcionario {
 
     private Pessoa pessoa;
     private String ctps;
     private Double salario;
 
-    public Funcionario(String nome, String cpf, String telefone, String endereco, String ctps, Double salario){
+    public Funcionario(String nome, String cpf, String telefone, String endereco, String ctps, Double salario) {
 
         this.pessoa = new Pessoa(nome, cpf, telefone, cpf);
         this.ctps = ctps;
@@ -14,8 +14,14 @@ public class Funcionario{
 
     }
 
-    void mostrarFuncionario(){
+    void mostrarFuncionario() {
 
+        System.out.println("Carregando...");
+        System.err.println(
+                "----------------------------------INFORMAÇÕES--------------------------------");
+        System.out.print("\n");
+        System.out.print("--> Dados Funcuonário\n");
+        System.err.print("\n");
         System.out.println("Funcionário: " + this.pessoa.getNome());
         System.out.println("Endereço: " + this.pessoa.getEndereco());
         System.out.println("Telefone: " + this.pessoa.getTelefone());
