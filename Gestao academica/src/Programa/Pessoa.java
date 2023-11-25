@@ -31,5 +31,19 @@ public class Pessoa{
         return cpf;
     }
 
+    public void mostrarPessoa(){
+
+        System.out.println("Carregando...");
+        System.err.println(
+                "============================ INFORMAÇÕES ============================");
+        System.out.print("\n");
+        System.out.print("--> Dados Pessoa\n");
+        System.err.print("\n");
+        System.out.println("Nome: " + this.nome);
+        System.out.println("Endereço: " + this.endereco);
+        System.out.println("Telefone: " + this.telefone);
+        System.out.println("CPF: " + this.cpf);
+    }
+
 
 }

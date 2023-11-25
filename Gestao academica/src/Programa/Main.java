@@ -39,13 +39,14 @@ public class Main {
                     int Quant_Alunos;
                     int codigo;
                     System.out.println("Digite quantos alunos deseja cadastrar: ");
+                    System.out.print("--> ");
                     Quant_Alunos = sc.nextInt();
                     aluno = new Aluno[Quant_Alunos];
 
                     for (int i = 0; i < Quant_Alunos; i++) {
 
                         // Aluno
-                        System.out.println("[" + (i + 1) + "]" + "Aluno");
+                        System.out.println("\n0" + (i + 1) + "]" + "Aluno");
                         System.out.println("\n0" + (1) + ")" + " Digite o nome do aluno: ");
                         System.out.print("--> ");
                         if (i == 0)
@@ -65,7 +66,7 @@ public class Main {
 
                         // Curso
                         System.out.println("\n--> Graduação ");
-                        System.out.print("\n0" + (i + 5) + ")" + "Nome do curso: \n");
+                        System.out.print("\n0" + (i + 5) + ")" + " Nome do curso: \n");
                         System.out.print("-->");
                         nomeDocurso = sc.nextLine();
                         System.out.print("\n--> Cadastrar disciplinas ");
@@ -74,7 +75,7 @@ public class Main {
                         disciplina = new String[TotalDisc];
 
                         for (int a = 0; a < TotalDisc; a++) {
-                            System.out.print("\n-->");
+                            System.out.print("\n--> ");
                             if (a == 0)
                                 sc.nextLine();
                             disciplina[a] = sc.nextLine();
@@ -96,7 +97,7 @@ public class Main {
                             "\n===================================== BANCO DE DADOS - ALUNO =========================================\n");
                     System.out.println("Imprimir relatório de alunos?");
                     System.out.println("[1] SIM\n[2] NÃO");
-                    System.out.print("-->");
+                    System.out.print("--> ");
                     int escolha1;
                     escolha1 = sc.nextInt();
 
@@ -133,7 +134,9 @@ public class Main {
                     // Funcionário
                     int Quant_Func, escolha2;
                     System.out.println("Quantos funcionários deseja cadastrar? ");
+                    System.out.print("--> ");
                     Quant_Func = sc.nextInt();
+                    System.out.print("\n");
                     funcionario = new Funcionario[Quant_Func];
 
                     System.out.println("Este funcionário é:\n[1] Professor\n[2] Técnico Administrativo");
@@ -149,28 +152,34 @@ public class Main {
                                 // Dados pessoa
                                 System.out.println("[" + (i + 1) + "]" + " Professor\n");
                                 System.out.println(
-                                        "========================= ÁREA PARA CADASTRAMENTO DOS DOCENTES =========================\n");
-                                System.out.println("0" + (1) + ")" + " Digite o nome do professor: ");
+                                        "===================================== ÁREA PARA CADASTRAMENTO DOS DOCENTES ================================\n");
+                                System.out.println("\n0" + (1) + ")" + " Digite o nome do professor: ");
                                 System.out.print("--> ");
                                 sc.nextLine();
                                 nome = sc.nextLine();
+                                System.out.println("\n");
                                 System.out.println("\n0" + (2) + ")" + " Digite o cpf do professor: ");
                                 System.out.print("--> ");
                                 cpf = sc.nextLine();
+                                System.out.println("\n");
                                 System.out.println("\n0" + (3) + ")" + " Digite o endereco do professor: ");
                                 System.out.print("--> ");
                                 endereco = sc.nextLine();
+                                System.out.println("\n");
                                 System.out.println("\n0" + (4) + ")" + " Digite o telefone do professor: ");
                                 System.out.print("--> ");
                                 telefone = sc.nextLine();
+                                System.out.println("\n");
 
                                 // Dados funcionario
                                 System.out.println("\n0" + (5) + ")" + " CTPS do professor: ");
                                 System.out.print("--> ");
                                 ctps = sc.nextLine();
+                                System.out.println("\n");
                                 System.out.println("\n0" + (6) + ")" + " Cadastrar salário: ");
                                 System.out.print("--> ");
                                 salario = sc.nextDouble();
+                                System.out.println("\n");
 
                                 // Dados professor
                                 System.out.println("--> Cadastrar disciplinas ");
@@ -181,16 +190,20 @@ public class Main {
 
                                 for (int a = 0; a < TotalDisc; a++) {
 
-                                    System.out.print("\n-->");
+                                    System.out.print("\n--> ");
                                     sc.nextLine();
                                     disciplina[a] = sc.nextLine();
 
                                 }
-
+                                System.out.println("\n");
                                 System.out.println("\n0" + (7) + ")" + "Area de Pesquisa:");
+                                System.out.print("\n--> ");
                                 areaP = sc.nextLine();
+                                System.out.println("\n");
                                 System.out.println("\n0" + (8) + ")" + "Titulação: ");
+                                System.out.print("\n--> ");
                                 titulacao = sc.nextLine();
+                                System.out.println("\n");
                                 professor[i] = new Professor(titulacao, areaP, nome, cpf, endereco, telefone, ctps,
                                         salario,
                                         disciplina);
@@ -207,14 +220,14 @@ public class Main {
 
                             if (escolha3 == 1) {
                                 System.out.println("\nImprimir relatório: \n[1] Um professor\n[2] Todos professores");
-                                System.out.print("-->");
+                                System.out.println("--> ");
                                 int escI;
                                 escI = sc.nextInt();
 
                                 if (escI == 1) {
-                                    System.out.println("Digite a posição do professor que deseja imprimir? ");
+                                    System.out.println("\nDigite a posição do professor que deseja imprimir? ");
                                     int escP;
-                                    System.out.print("--> ");
+                                    System.out.println("--> \n");
                                     escP = sc.nextInt();
 
                                     for (int j = 0; j < Quant_Func; j++) {
@@ -233,11 +246,11 @@ public class Main {
                                 }
                             }
                         }
-
+                        
                         else {
                             // Técnico Administrativo
                             System.out.println(
-                                    "========================= ÁREA PARA CADASTRAMENTO DOS TÉCNICOS ===========================");
+                                    "===================================== ÁREA PARA CADASTRAMENTO DOS TÉCNICOS ===================================");
 
                             for (int i = 0; i < Quant_Func; i++) {
                                 // Dados pessoa
@@ -246,29 +259,37 @@ public class Main {
                                 System.out.print("--> ");
                                 sc.nextLine();
                                 nome = sc.nextLine();
+                                System.out.print("\n");
                                 System.out.println("0" + (2) + ")" + " Digite o cpf do funcionário: ");
                                 System.out.print("--> ");
                                 cpf = sc.nextLine();
+                                System.out.print("\n");
                                 System.out.println("0" + (3) + ")" + " Digite o endereco do funcionário: ");
                                 System.out.print("--> ");
                                 endereco = sc.nextLine();
+                                System.out.println("\n");
                                 System.out.println("0" + (4) + ")" + " Digite o telefone do funcionário: ");
                                 System.out.print("--> ");
                                 telefone = sc.nextLine();
+                                System.out.print("\n");
                                 // Dados funcionario
                                 System.out.println("0" + (5) + ")" + " CTPS do funcionário: ");
                                 System.out.print("--> ");
                                 ctps = sc.nextLine();
+                                System.out.print("\n");
                                 System.out.println("0" + (6) + ")" + " Cadastrar salário: ");
                                 System.out.print("--> ");
                                 salario = sc.nextDouble();
+                                System.out.print("\n Cadastro realizado com sucesso!");
+                                System.out.print("\n...");
+                                System.out.println("");
 
                                 funcionario[i] = new Funcionario(nome, cpf, telefone, endereco, ctps, salario);
 
                             }
                             // Mostrar as informações
                             System.out.println(
-                                    "===================================== BANCO DE DADOS - TÉCNICOS =========================================\n");
+                                    "\n===================================== BANCO DE DADOS - TÉCNICOS =========================================\n");
                             System.out.println("Imprimir relatório de técnicos?");
                             System.out.println("[1] SIM\n[2] NÃO");
                             System.out.print("-->");
@@ -308,9 +329,8 @@ public class Main {
                     break;
 
                 case 3:
-                    System.out.println("...");
-                    sc.nextLine();
-                    System.out.println("Programa finalizado.");
+                    System.out.println("\nProcessando...");
+                    System.out.println("   Programa finalizado.");
                     break;
 
                 default:
@@ -319,6 +339,9 @@ public class Main {
         } while (escolha != 3);
 
         sc.close();
+
+        
     }
+
 
 }

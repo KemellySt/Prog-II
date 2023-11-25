@@ -16,7 +16,7 @@ public class Funcionario {
 
     void mostrarFuncionario() {
 
-        System.out.println("Carregando...");
+        System.out.println("\nCarregando...\n");
         System.err.println(
                 "============================ INFORMAÇÕES ============================");
         System.out.print("\n");

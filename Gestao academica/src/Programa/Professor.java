@@ -20,15 +20,6 @@ public class Professor {
 
     }
 
-    /*
-     * public Professor(String titulacao, String areaP, String disciplinas){
-     * 
-     * this.disciplinas = new Disciplinas(disciplinas);
-     * this.titualacao = titulacao;
-     * this.areaP = areaP;
-     * 
-     * }
-     */
 
     public String getTitualacao() {
         return titualacao;
@@ -50,11 +41,9 @@ public class Professor {
         this.funcionario = funcionario;
     }
 
+
     void mostrarProfessor() {
 
-        System.out.println("Carregando...");
-        System.err.println(
-                "----------------------------------INFORMAÇÕES--------------------------------");
         System.out.print("\n");
         System.out.print("--> Dados do Docente\n");
         System.err.print("\n");

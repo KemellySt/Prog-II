@@ -33,7 +33,7 @@ public class Aluno {
 
     void mostrarAluno() {
 
-        System.out.println("Carregando...");
+        System.out.println("\nCarregando...\n");
         System.err.println(
                 "============================================== INFORMAÇÕES ==============================================");
         System.out.print("\n");
@@ -42,7 +42,7 @@ public class Aluno {
         System.out.println("Nome: " + this.pessoa.getNome());
         System.out.println("Matrícula: " + this.getMatricula());
         System.out.println("Endereço: " + this.pessoa.getEndereco());
-        System.out.println("Telefone:" + this.pessoa.getTelefone());
+        System.out.println("Telefone: " + this.pessoa.getTelefone());
         this.curso.mostrarCurso();
 
     }
