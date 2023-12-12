@@ -41,7 +41,6 @@ public class Professor {
         this.funcionario = funcionario;
     }
 
-
     void mostrarProfessor() {
 
         System.out.print("\n");
